@@ -4,18 +4,94 @@ import User from '../assets/user.png';
 import Work1 from '../assets/work-1.png';
 import Work2 from '../assets/work-2.png';
 import Work3 from '../assets/work-3.png';
+import facebook from '../assets/facebook.png';
+import instagram from '../assets/instagram.png';
+import linkedin from '../assets/linkedin.png';
+import telefone from '../assets/telefone.png';
+import CV from '../assets/CV.pdf';
+import { useState } from 'react';
+
 // import PhoneBKG from '../assets/logo.png';
 
 function Main() {
+  const [showSkill, setShowSkill] = useState(false);
+  const [showExperience, setshowExperience] = useState(false);
+  const [showEducation, setshowEducation] = useState(false);
+  const btnSkill = document.querySelector('#skill');
+  const btnExp = document.querySelector('#exp');
+  const btnEdc = document.querySelector('#edc');
+
+
+  const handleShowSkill = () => {
+    btnSkill.classList.add('active-link');
+    btnExp.classList.remove('active-link');
+    btnEdc.classList.remove('active-link');
+    setShowSkill(true);
+    setshowEducation(false);
+    setshowExperience(false);
+  }
+  const handleShowExperience = () => {
+    btnSkill.classList.remove('active-link');
+    btnEdc.classList.remove('active-link');
+    btnExp.classList.add('active-link');
+    setShowSkill(false);
+    setshowEducation(false);
+    setshowExperience(true);
+
+  }
+  const handleShowEducation = () => {
+    btnExp.classList.remove('active-link');
+    btnEdc.classList.add('active-link');
+    setShowSkill(false);
+    setshowExperience(false);
+    setshowEducation(true);
+  }
+
+  const SkillDiv = () => {
+
+    return (
+      <div class="tab-contents active-tab" id="skills">
+        <ul>
+          <li><span>Front End</span><br /> HTML | CSS | JavaScript | React | Material UI | </li>
+          <li><span>Back End</span><br /> Node.js | JavaScript | API REST | Java | SQL</li>
+          <li><span>Técnico</span><br />Manutenção de Micro | Redes, Protocolo TCP/IP</li>
+        </ul>
+      </div>
+    )
+  }
+
+  const ExperienceDiv = () => {
+
+    return (
+      <div class="tab-contents active-tab" id="experience">
+        <ul>
+          <li><span>2020 - 2022</span><br />Datamétrica - Atendente de Telemarketing</li>
+        </ul>
+      </div>
+    )
+
+  }
+
+  const EducationDiv = () => {
+
+    return (
+      <div class="tab-contents active-tab" id="education">
+        <ul>
+          <li><span>2018</span><br />IFBA - Instituto Federal de Educação Ciências e Tecnologia da Bahia</li>
+          <li><span>2023</span><br />Cubos Academy - Desenvolvimento de Software</li>
+        </ul>
+      </div>
+    )
+
+  }
 
   return (
     <>
-      <div id="header">
+      <header id="header">
         <div class="container">
           <nav>
             <img src={Logo} class="logo" />
             <ul>
-              <li><a href="#">Home</a></li>
               <li><a href="#about">About</a></li>
               <li><a href="#services">Services</a></li>
               <li><a href="#portfolio">Portfolio</a></li>
@@ -26,10 +102,10 @@ function Main() {
           </nav>
           <div class="header-text">
             <p>FullStack Developer</p>
-            <h1>Hi, I'm <span>Rodrigo </span>I'm from Brazil</h1>
+            <h1>Hi, my name is <span>Rodrigo </span></h1>
           </div>
         </div>
-      </div>
+      </header>
       <div id="about">
         <div class="container">
           <div class="row">
@@ -37,38 +113,22 @@ function Main() {
               <img src={User} />
             </div>
             <div class="about-col-2">
+
               <h1 class="sub-title">About Me</h1>
               <p>Baiano, nascido e criado no azeite de dendê. Apaixonado por tecnologia desde guri. Curioso, obstinado e ambicioso em viver o que o mundo tem a oferecer.</p><br />
               <p>Desenvolvedor full stack em formação pela Cubos Academy. Técnico em informática pelo Instituto Federal da Bahia. Bagagem em Java e SQL.</p><br />
               <p>Tenho interesse em atuar como Desenvolvedor back-end ou analista de dados. Em busca de conhecimento e novas oportunidades de aprendizado, ambientes
                 onde eu possa evoluir na programação em geral e ao mesmo tempo contribuir com os meus conhecimentos.</p><br />
+
               <div class="tab-titles">
-                <p class="tab-links active-link" onclick="openTab('skills')">Skills</p>
-                <p class="tab-links" onclick="openTab('experience')">Experience</p>
-                <p class="tab-links" onclick="openTab('education')">Education</p>
+                <p id="skill" class="tab-links " onClick={handleShowSkill}>Skills</p>
+                <p id="exp" class="tab-links " onClick={handleShowExperience}>Experience</p>
+                <p id="edc" class="tab-links " onClick={handleShowEducation}>Education</p>
               </div>
-              <div class="tab-contents active-tab" id="skills">
-                <ul>
-                  <li><span>UI/UX</span><br />Designing Web/App interfaces</li>
-                  <li><span>Web Development</span><br />Web app Development</li>
-                  <li><span>App Development</span><br />Building Android/iOS apps</li>
-                </ul>
-              </div>
-              <div class="tab-contents" id="experience">
-                <ul>
-                  <li><span>2021 - Current</span><br />UI/UX Design training at ET Institute</li>
-                  <li><span>2019-2021</span><br />Web app Development</li>
-                  <li><span>2017-2019</span><br />UI/UX Design Executive at Coin Digital Ltd.</li>
-                  <li><span>2017-2019</span><br />Internship at eKart ecommerce.</li>
-                </ul>
-              </div>
-              <div class="tab-contents" id="education">
-                <ul>
-                  <li><span>2016</span><br />UI/UX Design training at ET Institute</li>
-                  <li><span>2016 Development</span><br />MBA from MIT Bangalore</li>
-                  <li><span>2014</span><br />BBA from ISM Bangalore</li>
-                </ul>
-              </div>
+              {showSkill ? <SkillDiv /> : null}
+              {showExperience ? <ExperienceDiv /> : null}
+              {showEducation ? <EducationDiv /> : null}
+
             </div>
           </div>
         </div>
@@ -145,15 +205,14 @@ function Main() {
           <div class="row">
             <div class="contact-left">
               <h1 class="sub-title">Contact Me</h1>
-              <p><i class="fas fa-paper-plane"></i> example@gmail.com</p>
-              <p><i class="fas fa-phone-square-alt"></i> 1234567890</p>
+              <p><i class="fas fa-paper-plane"></i> rnattan82@gmail.com</p>
+              <p className='p-telefone'><img src={telefone} class="fas fa-phone-square-alt img-icons"></img> (75) 9 9894-1934</p>
               <div class="social-icons">
-                <a href="#"><i class="fab fa-facebook"></i></a>
-                <a href="#"><i class="fab fa-twitter-square"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.facebook.com/rodrigo.natan.9/" target="_blank"><img className='fab fa-facebook img-icons' src={facebook} alt="Facebook" /></a>
+                <a href="https://www.instagram.com/natandh/"><img className='fab fa-instagram img-icons' src={instagram} alt="Instagram" /></a>
+                <a href="https://www.linkedin.com/in/natandh/"><img className='fab fa-linkedin img-icons' src={linkedin} alt="Instagram" /></a>
               </div>
-              <a href="images/my-cv.pdf" download class="btn btn2">Download CV</a>
+              <a href={CV} download class="btn btn2">Download Currículo</a>
             </div>
             <div class="contact-right">
               <form>
@@ -169,7 +228,7 @@ function Main() {
         <div class="copyright">
           {/* <p>copyright @ Dev Alphaspace. Made with <i class="fas fa-heart"></i> by Dev Alphaspace</p> */}
         </div>
-      </div>
+      </div >
 
     </>
 

@@ -134,9 +134,9 @@ nav ul li a:hover::after {
   width: 100%;
 }
 
-/* .tab-links.active-link::after {
-  width: 50%;
-} */
+.tab-links.active-link::after {
+  width: 100%;
+}
 
 .tab-contents ul li {
   list-style: none;
@@ -281,6 +281,7 @@ nav ul li a:hover::after {
   color: #fff;
   text-decoration: none;
   transition: background 0.75s;
+  cursor: pointer;
 }
 
 .btn:hover {
@@ -307,7 +308,18 @@ nav ul li a:hover::after {
 }
 
 .social-icons {
+  align-items: center;
   margin-top: 30px;
+}
+
+.img-icons {
+  width: 1.5em;
+}
+
+.p-telefone {
+  display: flex;
+  gap: 10px;
+  align-items: center;
 }
 
 .social-icons a {
