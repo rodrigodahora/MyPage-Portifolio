@@ -1,15 +1,14 @@
-import './styles.css';
-import Logo from '../assets/logo.png';
-import User from '../assets/user.png';
-import Work1 from '../assets/work-1.png';
-import Work2 from '../assets/work-2.png';
-import Work3 from '../assets/work-3.png';
+import { useState } from 'react';
+import CV from '../assets/CV.pdf';
 import facebook from '../assets/facebook.png';
 import instagram from '../assets/instagram.png';
 import linkedin from '../assets/linkedin.png';
 import telefone from '../assets/telefone.png';
-import CV from '../assets/CV.pdf';
-import { useState } from 'react';
+import User from '../assets/user.png';
+import Work1 from '../assets/work-1.png';
+import Work2 from '../assets/work-2.png';
+import Work3 from '../assets/work-3.png';
+import './styles.css';
 
 // import PhoneBKG from '../assets/logo.png';
 
@@ -90,7 +89,7 @@ function Main() {
       <header id="header">
         <div class="container">
           <nav>
-            <img src={Logo} class="logo" />
+            <h1 className='logo'><span className='span-logo'>R</span>odrigo</h1>
             <ul>
               <li><a href="#about">About</a></li>
               <li><a href="#services">Services</a></li>
@@ -102,7 +101,7 @@ function Main() {
           </nav>
           <div class="header-text">
             <p>FullStack Developer</p>
-            <h1>Hi, my name is <span>Rodrigo </span></h1>
+            <h1>Hi, my name is <span className='span-header'>Rodrigo </span></h1>
           </div>
         </div>
       </header>
