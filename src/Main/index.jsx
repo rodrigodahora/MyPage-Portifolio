@@ -1,9 +1,11 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import CV from '../assets/CV.pdf';
 import facebook from '../assets/facebook.png';
 import instagram from '../assets/instagram.png';
 import linkedin from '../assets/linkedin.png';
 import telefone from '../assets/telefone.png';
+import top from '../assets/up-arrow.png';
+import gitHub from '../assets/github.png';
 import User from '../assets/user.png';
 import Work1 from '../assets/work-1.png';
 import Work2 from '../assets/work-2.png';
@@ -16,10 +18,15 @@ function Main() {
   const [showSkill, setShowSkill] = useState(false);
   const [showExperience, setshowExperience] = useState(false);
   const [showEducation, setshowEducation] = useState(false);
-  const btnSkill = document.querySelector('#skill');
-  const btnExp = document.querySelector('#exp');
-  const btnEdc = document.querySelector('#edc');
+  let btnSkill;
+  let btnExp;
+  let btnEdc;
 
+  useEffect(() => {
+     btnSkill = document.querySelector('#skill');
+     btnExp = document.querySelector('#exp');
+     btnEdc = document.querySelector('#edc');
+  })
 
   const handleShowSkill = () => {
     btnSkill.classList.add('active-link');
@@ -39,6 +46,7 @@ function Main() {
 
   }
   const handleShowEducation = () => {
+    btnSkill.classList.remove('active-link');
     btnExp.classList.remove('active-link');
     btnEdc.classList.add('active-link');
     setShowSkill(false);
@@ -92,7 +100,6 @@ function Main() {
             <h1 className='logo'><span className='span-logo'>R</span>odrigo</h1>
             <ul>
               <li><a href="#about">About</a></li>
-              <li><a href="#services">Services</a></li>
               <li><a href="#portfolio">Portfolio</a></li>
               <li><a href="#contact">Contact</a></li>
               <i class="fas fa-times"></i>
@@ -109,7 +116,7 @@ function Main() {
         <div class="container">
           <div class="row">
             <div class="about-col-1">
-              <img src={User} />
+              <img src={User} alt='User' />
             </div>
             <div class="about-col-2">
 
@@ -120,45 +127,14 @@ function Main() {
                 onde eu possa evoluir na programação em geral e ao mesmo tempo contribuir com os meus conhecimentos.</p><br />
 
               <div class="tab-titles">
-                <p id="skill" class="tab-links " onClick={handleShowSkill}>Skills</p>
-                <p id="exp" class="tab-links " onClick={handleShowExperience}>Experience</p>
-                <p id="edc" class="tab-links " onClick={handleShowEducation}>Education</p>
+                <p id="skill" className="tab-links " onClick={handleShowSkill}>Skills</p>
+                <p id="exp" className="tab-links " onClick={handleShowExperience}>Experience</p>
+                <p id="edc" className="tab-links " onClick={handleShowEducation}>Education</p>
               </div>
               {showSkill ? <SkillDiv /> : null}
               {showExperience ? <ExperienceDiv /> : null}
               {showEducation ? <EducationDiv /> : null}
 
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div id="services">
-        <div class="container">
-          <h1 class="sub-title">My Services</h1>
-          <div class="services-list">
-            <div>
-              <i class="fa-brands fa-android"></i>
-              <h2>App Development</h2>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore aliquam nam sit. Soluta quasi
-                officia, alias vitae fugiat fuga exercitationem.</p>
-              <a href="#">Learn more</a>
-            </div>
-            <div>
-              <i class="fa-solid fa-code"></i>
-              <h2>Web Development</h2>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore aliquam nam sit. Soluta quasi
-                officia, alias vitae fugiat fuga exercitationem.</p>
-              <a href="#">Learn more</a>
-
-            </div>
-            <div>
-
-              <i class="fa-solid fa-crop-simple"></i>
-              <h2>UI/UX Design</h2>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore aliquam nam sit. Soluta quasi
-                officia, alias vitae fugiat fuga exercitationem.</p>
-              <a href="#">Learn more</a>
             </div>
           </div>
         </div>
@@ -171,10 +147,11 @@ function Main() {
             <div class="work">
               <img src={Work1} alt="" />
               <div class="layer">
-                <h2>Social Media App</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat quam facere quibusdam
-                  deserunt dolore vero. Incidunt ea nihil sint. Velit.</p>
-                <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                <h2>Dindin-Bank</h2>
+                <p>Projeto estruturado pela Cubos Academy para desafio de módulo em dupla. É um website
+                  onde os usuários podem fazer listagens de aquisições e ou vendas e terem um resumo de ganhos ou perdas.
+                </p>
+                <a href="#"><img src={gitHub} class="fas fa-external-link-alt"/></a>
               </div>
             </div>
             <div class="work">
@@ -183,7 +160,7 @@ function Main() {
                 <h2>Music App</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat quam facere quibusdam
                   deserunt dolore vero. Incidunt ea nihil sint. Velit.</p>
-                <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                <a href="#"><img src={gitHub} class="fas fa-external-link-alt"/></a>
               </div>
             </div>
             <div class="work">
@@ -192,7 +169,7 @@ function Main() {
                 <h2>Online Shopping App</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat quam facere quibusdam
                   deserunt dolore vero. Incidunt ea nihil sint. Velit.</p>
-                <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                <a href="#"><img src={gitHub} class="fas fa-external-link-alt"/></a>
               </div>
             </div>
           </div>
@@ -223,9 +200,9 @@ function Main() {
             </div>
           </div>
         </div>
-        <a href="#header" class="btn">Back to the Top</a>
+        <a href="#" ><img id='btn-top' src={top} alt="Back to the top"/></a>
         <div class="copyright">
-          {/* <p>copyright @ Dev Alphaspace. Made with <i class="fas fa-heart"></i> by Dev Alphaspace</p> */}
+          <p>copyright @ Dev Alphaspace. Made with <i class="fas fa-heart"></i> by Dev Alphaspace</p>
         </div>
       </div >
 
