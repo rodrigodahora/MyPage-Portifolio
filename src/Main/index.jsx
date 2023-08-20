@@ -145,13 +145,13 @@ function Main() {
           <h1 class="sub-title">My Works</h1>
           <div class="work-list">
             <div class="work">
-              <img src={Work1} alt="" />
+              <img src={Work1} alt="Primeiro Projeto" />
               <div class="layer">
                 <h2>Dindin-Bank</h2>
                 <p>Projeto estruturado pela Cubos Academy para desafio de módulo em dupla. É um website
                   onde os usuários podem fazer listagens de aquisições e ou vendas e terem um resumo de ganhos ou perdas.
                 </p>
-                <a href="#"><img src={gitHub} class="fas fa-external-link-alt"/></a>
+                <a href="https://github.com/rodrigodahora/Dindin-Bank" target='_blank'><img src={gitHub} class="fas fa-external-link-alt"/></a>
               </div>
             </div>
             <div class="work">
@@ -184,9 +184,9 @@ function Main() {
               <p><i class="fas fa-paper-plane"></i> rnattan82@gmail.com</p>
               <p className='p-telefone'><img src={telefone} class="fas fa-phone-square-alt img-icons"></img> (75) 9 9894-1934</p>
               <div class="social-icons">
-                <a href="https://www.facebook.com/rodrigo.natan.9/" target="_blank"><img className='fab fa-facebook img-icons' src={facebook} alt="Facebook" /></a>
-                <a href="https://www.instagram.com/natandh/"><img className='fab fa-instagram img-icons' src={instagram} alt="Instagram" /></a>
-                <a href="https://www.linkedin.com/in/natandh/"><img className='fab fa-linkedin img-icons' src={linkedin} alt="Instagram" /></a>
+                <a href="https://www.facebook.com/rodrigo.natan.9/" target='_blank'><img className='fab fa-facebook img-icons' src={facebook} alt="Facebook" /></a>
+                <a href="https://www.instagram.com/natandh/" target='_blank'><img className='fab fa-instagram img-icons' src={instagram} alt="Instagram" /></a>
+                <a href="https://www.linkedin.com/in/natandh/" target='_blank'><img className='fab fa-linkedin img-icons' src={linkedin} alt="Instagram" /></a>
               </div>
               <a href={CV} download class="btn btn2">Download Currículo</a>
             </div>
@@ -195,7 +195,7 @@ function Main() {
                 <input type="text" name="Name" placeholder="Your Name" required />
                 <input type="email" name="Email" placeholder="Your Email" required />
                 <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
-                <button type="submit" class="btn btn3">submit</button>
+                <button type="submit" class="btn btn3">Enviar</button>
               </form>
             </div>
           </div>

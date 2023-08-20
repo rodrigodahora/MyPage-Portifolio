@@ -299,6 +299,7 @@ nav ul li a:hover::after {
   text-decoration: none;
   transition: background 0.75s;
   cursor: pointer;
+  font-size: 1em;
 }
 
 #btn-top{
