@@ -1,15 +1,15 @@
 import { useEffect, useState } from 'react';
-import CV from '../assets/CV.pdf';
-import facebook from '../assets/facebook.png';
-import instagram from '../assets/instagram.png';
-import linkedin from '../assets/linkedin.png';
+import CV from '../assets/curriculo/CV.pdf';
+import facebook from '../assets/redes/facebook.png';
+import instagram from '../assets/redes/instagram.png';
+import linkedin from '../assets/redes/linkedin.png';
 import telefone from '../assets/telefone.png';
 import top from '../assets/up-arrow.png';
-import gitHub from '../assets/github.png';
+import gitHub from '../assets/redes/github.png';
 import User from '../assets/user.png';
-import Work1 from '../assets/work-1.png';
-import Work2 from '../assets/work-2.png';
-import Work3 from '../assets/work-3.png';
+import Work1 from '../assets/works/work-1.png';
+import Work2 from '../assets/works/work-2.jpg';
+import Work3 from '../assets/works/work-3.jpg';
 import './styles.css';
 
 // import PhoneBKG from '../assets/logo.png';
@@ -157,9 +157,8 @@ function Main() {
             <div class="work">
               <img src={Work2} alt="" />
               <div class="layer">
-                <h2>Music App</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat quam facere quibusdam
-                  deserunt dolore vero. Incidunt ea nihil sint. Velit.</p>
+                <h2>Building a new Project</h2>
+                <p></p>
                 <a href="#"><img src={gitHub} class="fas fa-external-link-alt"/></a>
               </div>
             </div>
@@ -167,9 +166,8 @@ function Main() {
             <div class="work">
               <img src={Work3} alt="" />
               <div class="layer">
-                <h2>Online Shopping App</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat quam facere quibusdam
-                  deserunt dolore vero. Incidunt ea nihil sint. Velit.</p>
+                <h2>Building a new Project</h2>
+                <p></p>
                 <a href="#"><img src={gitHub} class="fas fa-external-link-alt"/></a>
               </div>
             </div>
