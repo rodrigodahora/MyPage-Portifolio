@@ -94,7 +94,7 @@ nav ul li a:hover::after {
 /* ----------ABOUT---------- */
 #about {
   padding: 80px 0px 20px 0px;
-  color: #ababab;
+  color: #ffffff;
 }
 
 .row {
@@ -117,7 +117,7 @@ nav ul li a:hover::after {
 }
 
 .sub-title {
-  font-size: 55px;
+  font-size: 50px;
   font-weight: 600;
   color: #fff;
 }

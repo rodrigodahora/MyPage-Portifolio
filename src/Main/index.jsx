@@ -163,6 +163,7 @@ function Main() {
                 <a href="#"><img src={gitHub} class="fas fa-external-link-alt"/></a>
               </div>
             </div>
+            
             <div class="work">
               <img src={Work3} alt="" />
               <div class="layer">
@@ -180,8 +181,7 @@ function Main() {
         <div class="container">
           <div class="row">
             <div class="contact-left">
-              <h1 class="sub-title">Contact Me</h1>
-              <p><i class="fas fa-paper-plane"></i> rnattan82@gmail.com</p>
+              <h2 class="sub-title">Contact Me</h2>
               <p className='p-telefone'><img src={telefone} class="fas fa-phone-square-alt img-icons"></img> (75) 9 9894-1934</p>
               <div class="social-icons">
                 <a href="https://www.facebook.com/rodrigo.natan.9/" target='_blank'><img className='fab fa-facebook img-icons' src={facebook} alt="Facebook" /></a>
