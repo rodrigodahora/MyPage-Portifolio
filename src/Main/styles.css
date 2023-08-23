@@ -108,7 +108,7 @@ nav ul li a:hover::after {
 }
 
 .about-col-1 img {
-  width: 100%;
+  width:100%;
   border-radius: 15px;
 }
 
@@ -304,9 +304,9 @@ nav ul li a:hover::after {
 
 #btn-top{
   position: fixed;
-  bottom: 15px;
-  right: 30px;
-  width: 40px;
+  bottom: 1em;
+  right: 2em;
+  width: 2.5em;
 
 }
 
@@ -392,29 +392,20 @@ form textarea {
   border: 0;
   outline: none;
   background: #262626;
-  padding: 15px;
-  margin: 15px 0;
+  padding: 1em;
+  margin: 1em 0;
   color: #fff;
-  font-size: 18px;
-  border-radius: 6px;
+  font-size: 1em;
+  border-radius: 0.8em;
 }
 
 .copyright {
   width: 100%;
   text-align: center;
-  padding: 25px 0;
+  padding: 1.5em 0;
   background: #262626;
   font-weight: 300;
-  margin-top: 20px;
-}
-
-.copyright i {
-  color: #0066ff;
-  transition: color 0.5s;
-}
-
-.copyright i:hover {
-  color: #fff;
+  margin-top: 2.5em;
 }
 
 nav .fas {
@@ -424,7 +415,7 @@ nav .fas {
 /* ----------CSS FOR SMALL SCREEN---------- */
 @media only screen and (max-width: 600px) {
   #header {
-    background-image: url(../assets/phone-background.png);
+    background-image: url(../assets/phone-background.jpg);
   }
 
   .header-text {
@@ -464,7 +455,7 @@ nav .fas {
 
   /* Adjust the header image and text size for small screens */
   #header {
-    background-image: url(../assets/phone-background.png);
+    background-image: url(../assets/phone-background.jpg);
   }
 
   .header-text {

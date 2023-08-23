@@ -102,7 +102,6 @@ function Main() {
               <li><a href="#about">About</a></li>
               <li><a href="#portfolio">Portfolio</a></li>
               <li><a href="#contact">Contact</a></li>
-              <i class="fas fa-times"></i>
             </ul>
             <i class="fas fa-bars"></i>
           </nav>
@@ -116,7 +115,7 @@ function Main() {
         <div class="container">
           <div class="row">
             <div class="about-col-1">
-              <img src={User} alt='User' />
+              <img className='img-user' src={User} alt='User' />
             </div>
             <div class="about-col-2">
 
@@ -176,12 +175,12 @@ function Main() {
       </div>
 
       <div id="contact">
-        <div class="container">
-          <div class="row">
-            <div class="contact-left">
-              <h2 class="sub-title">Contact Me</h2>
-              <p className='p-telefone'><img src={telefone} class="fas fa-phone-square-alt img-icons"></img> (75) 9 9894-1934</p>
-              <div class="social-icons">
+        <div className="container">
+          <div className="row">
+            <div className="contact-left">
+              <h2 className="sub-title">Contact Me</h2>
+              <p classNameName='p-telefone'><img src={telefone} className="fas fa-phone-square-alt img-icons"></img> (75) 9 9894-1934</p>
+              <div className="social-icons">
                 <a href="https://www.facebook.com/rodrigo.natan.9/" target='_blank'><img className='fab fa-facebook img-icons' src={facebook} alt="Facebook" /></a>
                 <a href="https://www.instagram.com/natandh/" target='_blank'><img className='fab fa-instagram img-icons' src={instagram} alt="Instagram" /></a>
                 <a href="https://www.linkedin.com/in/natandh/" target='_blank'><img className='fab fa-linkedin img-icons' src={linkedin} alt="Instagram" /></a>
@@ -192,16 +191,16 @@ function Main() {
               <form>
                 <input type="text" name="Name" placeholder="Your Name" required />
                 <input type="email" name="Email" placeholder="Your Email" required />
-                <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
-                <button type="submit" class="btn btn3">Enviar</button>
+                <textarea name="Message" rows="8" placeholder="Your Message"></textarea>
+                <button type="submit" className="btn btn3">Enviar</button>
               </form>
             </div>
           </div>
         </div>
         <a href="#" ><img id='btn-top' src={top} alt="Back to the top"/></a>
-        <div class="copyright">
+        <footer class="copyright">
           <p>copyright @ Dev Alphaspace. Made with <i class="fas fa-heart"></i> by Dev Alphaspace</p>
-        </div>
+        </footer>
       </div >
 
     </>
