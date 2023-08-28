@@ -18,6 +18,8 @@ function Main() {
   const [showSkill, setShowSkill] = useState(false);
   const [showExperience, setshowExperience] = useState(false);
   const [showEducation, setshowEducation] = useState(false);
+  const [mensagem, setMensagem] = useState('');
+
   let btnSkill;
   let btnExp;
   let btnEdc;
@@ -27,6 +29,10 @@ function Main() {
      btnExp = document.querySelector('#exp');
      btnEdc = document.querySelector('#edc');
   })
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+  }
 
   const handleShowSkill = () => {
     btnSkill.classList.add('active-link');
@@ -188,10 +194,12 @@ function Main() {
               <a href={CV} download class="btn btn2">Download Currículo</a>
             </div>
             <div class="contact-right">
-              <form>
+              <form onChange={
+                handleSubmit
+              }>
                 <input type="text" name="Name" placeholder="Your Name" required />
                 <input type="email" name="Email" placeholder="Your Email" required />
-                <textarea name="Message" rows="8" placeholder="Your Message"></textarea>
+                <textarea name="Message" rows="8" placeholder="Your Message" onChange={setMensagem}></textarea>
                 <button type="submit" className="btn btn3">Enviar</button>
               </form>
             </div>
