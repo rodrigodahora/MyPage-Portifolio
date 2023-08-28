@@ -11,15 +11,18 @@ import Work1 from '../assets/works/work-1.png';
 import Work2 from '../assets/works/work-2.jpg';
 import Work3 from '../assets/works/work-3.jpg';
 import './styles.css';
+import api from '../services/api';
 
 // import PhoneBKG from '../assets/logo.png';
 
-function Main() {
+export default function Main() {
   const [showSkill, setShowSkill] = useState(false);
   const [showExperience, setshowExperience] = useState(false);
   const [showEducation, setshowEducation] = useState(false);
   const [mensagem, setMensagem] = useState('');
-
+  const [email, setEmail] = useState('');
+  const [nome, setNome] = useState('');
+  
   let btnSkill;
   let btnExp;
   let btnEdc;
@@ -30,8 +33,31 @@ function Main() {
      btnEdc = document.querySelector('#edc');
   })
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
+
+    if(!nome && !email && !mensagem){
+      console.log("Preencha os campos!");
+      return;
+    }
+
+    const usuario = {
+        nome: nome,
+        email: email,
+        mensagem: mensagem
+      }
+
+      try {
+        const response = await api.post('/email', usuario);
+        
+        if(response.status === 200){
+          window.location.reload();
+        }
+        
+      } catch (error) {
+        console.error(error);
+      }
+    
   }
 
   const handleShowSkill = () => {
@@ -194,13 +220,11 @@ function Main() {
               <a href={CV} download class="btn btn2">Download Currículo</a>
             </div>
             <div class="contact-right">
-              <form onChange={
-                handleSubmit
-              }>
-                <input type="text" name="Name" placeholder="Your Name" required />
-                <input type="email" name="Email" placeholder="Your Email" required />
-                <textarea name="Message" rows="8" placeholder="Your Message" onChange={setMensagem}></textarea>
-                <button type="submit" className="btn btn3">Enviar</button>
+              <form>
+                <input type="text" name="Name" placeholder="Your Name" onChange={(event) => setNome(event.target.value)} required />
+                <input type="email" name="Email" placeholder="Your Email" onChange={(event) => setEmail(event.target.value)} required />
+                <textarea name="Message" rows="8" placeholder="Your Message" onChange={(event) => setMensagem(event.target.value)}></textarea>
+                <button onClick={handleSubmit} className="btn btn3">Enviar</button>
               </form>
             </div>
           </div>
@@ -216,4 +240,4 @@ function Main() {
   );
 }
 
-export default Main;
+

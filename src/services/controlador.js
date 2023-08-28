@@ -1,10 +1,8 @@
-const {mensagem, email, nome, assunto} = require('./src/Main/index.js');
 const transportador = require('./email');
 
-const env = require('node:process')
-
 const envio = async (req, res) => {
-    const {nome, email, mensagem} = req.body
+    try {
+        const {nome, email, mensagem} = req.body;
 
     if(!nome){
         return res.status(400).json({mensagem: 'Se identifique!'})
@@ -18,15 +16,17 @@ const envio = async (req, res) => {
         return res.status(400).json({mensagem: 'Escreva sua mensagem!'})
     }
 
-    //Fazer envio de email
-
     transportador.sendMail({
         from: `${nome} <${email}>`,
         to: '"Rodrigo Natan " <dahoradev10@gmail.com>',
         text: mensagem
     })
 
-    return res.json({mensagem: 'Email enviado com sucesso'})
+    return res.status(200).json({mensagem: 'Email enviado com sucesso!'});
+
+    } catch (error) {
+        return res.json(error)
+    }
 }
 
 module.exports = envio;
