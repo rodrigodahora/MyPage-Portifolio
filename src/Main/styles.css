@@ -311,9 +311,9 @@ nav ul li a:hover::after {
 }
 
 #btn-top:hover{
-
   scale: 1.1;
 }
+
 
 .btn:hover {
   background: #0066ff;

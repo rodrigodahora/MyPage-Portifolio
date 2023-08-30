@@ -131,15 +131,15 @@ export default function Main() {
           <nav>
             <h1 className='logo'><span className='span-logo'>R</span>odrigo</h1>
             <ul>
-              <li><a href="#about">About</a></li>
+              <li><a href="#about">Sobre</a></li>
               <li><a href="#portfolio">Portfolio</a></li>
-              <li><a href="#contact">Contact</a></li>
+              <li><a href="#contact">Contato</a></li>
             </ul>
             <i class="fas fa-bars"></i>
           </nav>
           <div class="header-text">
             <p>FullStack Developer</p>
-            <h1>Hi, my name is <span className='span-header'>Rodrigo </span></h1>
+            <h1>Olá, meu nome é <span className='span-header'>Rodrigo </span></h1>
           </div>
         </div>
       </header>
@@ -151,7 +151,7 @@ export default function Main() {
             </div>
             <div class="about-col-2">
 
-              <h1 class="sub-title">About Me</h1>
+              <h1 class="sub-title">Sobre Me</h1>
               <p>Baiano, nascido e criado no azeite de dendê. Apaixonado por tecnologia desde guri. Curioso, obstinado e ambicioso em viver o que o mundo tem a oferecer.</p><br />
               <p>Desenvolvedor full stack em formação pela Cubos Academy. Técnico em informática pelo Instituto Federal da Bahia. Bagagem em Java e SQL.</p><br />
               <p>Tenho interesse em atuar como Desenvolvedor back-end ou analista de dados. Em busca de conhecimento e novas oportunidades de aprendizado, ambientes
@@ -173,7 +173,7 @@ export default function Main() {
 
       <div id="portfolio">
         <div class="container">
-          <h1 class="sub-title">My Works</h1>
+          <h1 class="sub-title">Meus Trabalhos</h1>
           <div class="work-list">
             <div class="work">
               <img src={Work1} alt="Primeiro Projeto" />
@@ -188,7 +188,7 @@ export default function Main() {
             <div class="work">
               <img src={Work2} alt="" />
               <div class="layer">
-                <h2>Building a new Project</h2>
+                <h2>Projetos em Construção</h2>
                 <p></p>
                 <a href="#"><img src={gitHub} class="fas fa-external-link-alt"/></a>
               </div>
@@ -197,7 +197,7 @@ export default function Main() {
             <div class="work">
               <img src={Work3} alt="" />
               <div class="layer">
-                <h2>Building a new Project</h2>
+                <h2>Projetos em Construção</h2>
                 <p></p>
                 <a href="#"><img src={gitHub} class="fas fa-external-link-alt"/></a>
               </div>
@@ -210,7 +210,7 @@ export default function Main() {
         <div className="container">
           <div className="row">
             <div className="contact-left">
-              <h2 className="sub-title">Contact Me</h2>
+              <h2 className="sub-title">Contato</h2>
               <p classNameName='p-telefone'><img src={telefone} className="fas fa-phone-square-alt img-icons"></img> (75) 9 9894-1934</p>
               <div className="social-icons">
                 <a href="https://www.facebook.com/rodrigo.natan.9/" target='_blank'><img className='fab fa-facebook img-icons' src={facebook} alt="Facebook" /></a>
