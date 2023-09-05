@@ -23,11 +23,13 @@ export default function Main() {
   const [email, setEmail] = useState('');
   const [nome, setNome] = useState('');
   const [assunto, setAssunto] = useState('');
+  const [alert, setAlert] = useState('');
+  const [sucess, setSucess] = useState('');
   
   let btnSkill;
   let btnExp;
   let btnEdc;
-
+ 
   useEffect(() => {
      btnSkill = document.querySelector('#skill');
      btnExp = document.querySelector('#exp');
@@ -37,10 +39,25 @@ export default function Main() {
   const handleSubmit = async (event) => {
     event.preventDefault();
 
-    if(!nome && !email && !mensagem){
-      console.log("Preencha os campos!");
+    if(!nome){
+      setAlert('Preencha seu nome');
       return;
     }
+
+    if(!assunto){
+      setAlert('Preencha o assunto');
+      return;
+    }
+
+    if(!email){
+      setAlert('Preencha seu email');
+      return;
+    }
+    if(!mensagem){
+      setAlert('Preencha a mensagem');
+      return;
+    }
+
 
     const usuario = {
         nome: nome,
@@ -51,11 +68,16 @@ export default function Main() {
 
       try {
         const response = await api.post('/email', usuario);
-        
+      
         if(response.status === 200){
-          window.location.reload();
-        }
-        
+          setSucess(response.data.mensagem);
+          setAlert(null);
+          
+      }
+      setTimeout(() => {
+        window.location.reload()
+      },1300);
+      
       } catch (error) {
         console.error(error);
       }
@@ -227,6 +249,8 @@ export default function Main() {
                 <input type="text" name="Assunto" placeholder="Subject" onChange={(event) => setAssunto(event.target.value)} required />
                 <input type="email" name="Email" placeholder="Your Email" onChange={(event) => setEmail(event.target.value)} required />
                 <textarea name="Message" rows="8" placeholder="Your Message" onChange={(event) => setMensagem(event.target.value)}></textarea>
+                <strong className="strong-alert">{alert}</strong>
+                <strong className="strong-sucess">{sucess}</strong>
                 <button onClick={handleSubmit} className="btn btn3">Enviar</button>
               </form>
             </div>

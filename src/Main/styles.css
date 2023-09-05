@@ -398,6 +398,22 @@ form textarea {
   font-size: 1em;
   border-radius: 0.8em;
 }
+.strong-alert{
+    display: flex;
+    justify-content: center;
+    color: #d81c1c;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.strong-sucess{
+    display: flex;
+    justify-content: center;
+    color: #1cd835;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 700;
+}
 
 .copyright {
   width: 100%;
