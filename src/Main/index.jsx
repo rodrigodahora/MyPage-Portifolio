@@ -22,6 +22,7 @@ export default function Main() {
   const [mensagem, setMensagem] = useState('');
   const [email, setEmail] = useState('');
   const [nome, setNome] = useState('');
+  const [assunto, setAssunto] = useState('');
   
   let btnSkill;
   let btnExp;
@@ -44,6 +45,7 @@ export default function Main() {
     const usuario = {
         nome: nome,
         email: email,
+        assunto: assunto,
         mensagem: mensagem
       }
 
@@ -222,6 +224,7 @@ export default function Main() {
             <div class="contact-right">
               <form>
                 <input type="text" name="Name" placeholder="Your Name" onChange={(event) => setNome(event.target.value)} required />
+                <input type="text" name="Assunto" placeholder="Subject" onChange={(event) => setAssunto(event.target.value)} required />
                 <input type="email" name="Email" placeholder="Your Email" onChange={(event) => setEmail(event.target.value)} required />
                 <textarea name="Message" rows="8" placeholder="Your Message" onChange={(event) => setMensagem(event.target.value)}></textarea>
                 <button onClick={handleSubmit} className="btn btn3">Enviar</button>
