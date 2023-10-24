@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import CV from '../assets/curriculo/Rodrigo_daHora_Back-end.pdf';
+import CV from '../assets/curriculo/Rodrigo_daHora_Full-Stack.pdf';
 import facebook from '../assets/redes/facebook.png';
 import instagram from '../assets/redes/instagram.png';
 import linkedin from '../assets/redes/linkedin.png';
@@ -216,7 +216,7 @@ export default function Main() {
                 <p>Projeto estruturado pela Cubos Academy para desafio de módulo em equipe. É um website
                   onde os usuários podem fazer controles bancários e gestão de cobranças dos usuários.
                   Link do deploy no README do projeto!</p>
-                <a href="https://github.com/rodrigodahora/desafio-modulo05-front-Baby-Sharp-DOM-DOM"><img src={gitHub} class="fas fa-external-link-alt"/></a>
+                <a href="https://github.com/rodrigodahora/desafio-modulo05-front-Baby-Sharp-DOM-DOM" target='_blank'><img src={gitHub} class="fas fa-external-link-alt"/></a>
               </div>
             </div>
             
