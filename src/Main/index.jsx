@@ -8,7 +8,7 @@ import top from '../assets/up-arrow.png';
 import gitHub from '../assets/redes/github.png';
 import User from '../assets/user.png';
 import Work1 from '../assets/works/work-1.png';
-import Work2 from '../assets/works/work-2.jpg';
+import Work2 from '../assets/works/work-2.png';
 import Work3 from '../assets/works/work-3.jpg';
 import './styles.css';
 import api from '../services/api';
@@ -212,9 +212,11 @@ export default function Main() {
             <div class="work">
               <img src={Work2} alt="" />
               <div class="layer">
-                <h2>Projetos em Construção</h2>
-                <p></p>
-                <a href="#"><img src={gitHub} class="fas fa-external-link-alt"/></a>
+                <h2>Equipe Baby #</h2>
+                <p>Projeto estruturado pela Cubos Academy para desafio de módulo em equipe. É um website
+                  onde os usuários podem fazer controles bancários e gestão de cobranças dos usuários.
+                  Link do deploy no README do projeto!</p>
+                <a href="https://github.com/rodrigodahora/desafio-modulo05-front-Baby-Sharp-DOM-DOM"><img src={gitHub} class="fas fa-external-link-alt"/></a>
               </div>
             </div>
             
