@@ -68,16 +68,15 @@ export default function Main() {
 
       try {
         const response = await api.post('/email', usuario);
-        console.log(response);
       
         if(response.status === 200){
           setSucess(response.data.mensagem);
           setAlert(null);
           
       }
-      // setTimeout(() => {
-      //   window.location.reload()
-      // },1300);
+      setTimeout(() => {
+        window.location.reload()
+      },1300);
       
       } catch (error) {
         console.error(error);
