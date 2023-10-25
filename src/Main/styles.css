@@ -16,7 +16,15 @@ body {
   background-image: url(../assets/background.jpg);
   background-size: cover;
   background-position: center;
- 
+  font-weight: bold;
+}
+
+#header li:hover{
+  scale: 1.1;
+}
+
+button{
+  font-weight: bold;
 }
 
 .container {
@@ -28,6 +36,14 @@ nav {
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
+}
+
+.tab-titles p{
+  font-weight: bold;
+}
+
+.tab-titles p:hover{
+  scale: 1.1;
 }
 
 @font-face {

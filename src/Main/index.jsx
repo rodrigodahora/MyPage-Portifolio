@@ -6,7 +6,7 @@ import linkedin from '../assets/redes/linkedin.png';
 import telefone from '../assets/telefone.png';
 import top from '../assets/up-arrow.png';
 import gitHub from '../assets/redes/github.png';
-import User from '../assets/user.png';
+import User from '../assets/user.jpg';
 import Work1 from '../assets/works/work-1.png';
 import Work2 from '../assets/works/work-2.png';
 import Work3 from '../assets/works/work-3.jpg';
@@ -175,10 +175,10 @@ export default function Main() {
             </div>
             <div class="about-col-2">
 
-              <h1 class="sub-title">Sobre Me</h1>
+              <h1 class="sub-title">Sobre</h1>
               <p>Baiano, nascido e criado no azeite de dendê. Apaixonado por tecnologia desde guri. Curioso, obstinado e ambicioso em viver o que o mundo tem a oferecer.</p><br />
               <p>Desenvolvedor full stack em formação pela Cubos Academy. Técnico em informática pelo Instituto Federal da Bahia. Bagagem em Java e SQL.</p><br />
-              <p>Tenho interesse em atuar como Desenvolvedor back-end ou analista de dados. Em busca de conhecimento e novas oportunidades de aprendizado, ambientes
+              <p>Analista de dados em busca de conhecimento e novas oportunidades de aprendizado, ambientes
                 onde eu possa evoluir na programação em geral e ao mesmo tempo contribuir com os meus conhecimentos.</p><br />
 
               <div class="tab-titles">
