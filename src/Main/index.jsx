@@ -36,27 +36,42 @@ export default function Main() {
      btnEdc = document.querySelector('#edc');
   })
 
+  function isValidEmail(email) {
+    const emailRegex = /^[^\s@]+@[^\s@]+.[^\s@]+$/;
+    return emailRegex.test(email);
+  }
+
   const handleSubmit = async (event) => {
     event.preventDefault();
 
     if(!nome){
       setAlert('Preencha seu nome');
       return;
-    }
+    }else { setAlert(""); }
 
     if(!assunto){
       setAlert('Preencha o assunto');
       return;
-    }
+    }else { setAlert(""); }
 
     if(!email){
       setAlert('Preencha seu email');
       return;
-    }
+    }else { setAlert(""); }
+
+    if (!isValidEmail(email)) {
+      return setAlert("Email inválido!");
+    } else { setAlert(""); }
+
+    if(!isValidEmail){
+      setAlert('Email inválido');
+      return;
+    }else { setAlert(""); }
+
     if(!mensagem){
       setAlert('Preencha a mensagem');
       return;
-    }
+    }else { setAlert(""); }
 
 
     const usuario = {
@@ -176,7 +191,7 @@ export default function Main() {
             <div className="about-col-2">
 
               <h1 className="sub-title">Sobre</h1>
-              <p>Baiano, nascido e criado no azeite de dendê. Apaixonado por tecnologia desde guri. Curioso, obstinado e ambicioso em viver o que o mundo tem a oferecer.</p><br />
+              <p>Baiano, 26 anos. Apaixonado por tecnologia desde guri. Curioso, obstinado e ambicioso em viver o que o mundo tem a oferecer.</p><br />
               <p>Desenvolvedor full stack em formação pela Cubos Academy. Técnico em informática pelo Instituto Federal da Bahia. Bagagem em Java e SQL.</p><br />
               <p>Analista de dados em busca de conhecimento e novas oportunidades de aprendizado, ambientes
                 onde eu possa evoluir na programação em geral e ao mesmo tempo contribuir com os meus conhecimentos.</p><br />
