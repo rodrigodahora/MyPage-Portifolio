@@ -191,8 +191,9 @@ export default function Main() {
             <div className="about-col-2">
 
               <h1 className="sub-title">Sobre</h1>
+              <br />
               <p>Baiano, 26 anos. Apaixonado por tecnologia desde guri. Curioso, obstinado e ambicioso em viver o que o mundo tem a oferecer.</p><br />
-              <p>Desenvolvedor full stack em formação pela Cubos Academy. Técnico em informática pelo Instituto Federal da Bahia. Bagagem em Java e SQL.</p><br />
+              <p>Desenvolvedor fullStack, foco em Back-end. Técnico em informática pelo Instituto Federal da Bahia. Bagagem em Java e SQL.</p><br />
               <p>Analista de dados em busca de conhecimento e novas oportunidades de aprendizado, ambientes
                 onde eu possa evoluir na programação em geral e ao mesmo tempo contribuir com os meus conhecimentos.</p><br />
 
