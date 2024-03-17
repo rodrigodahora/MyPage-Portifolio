@@ -155,8 +155,9 @@ export default function Main() {
     return (
       <div className="tab-contents active-tab" id="education">
         <ul>
-          <li><span>2013 - 2018</span><br />IFBA - Instituto Federal de Educação Ciências e Tecnologia da Bahia</li>
+          <li><span>2013 - 2018</span><br />IFBA - Técnico em Informática</li>
           <li><span>2023</span><br />Cubos Academy - Desenvolvimento de Software</li>
+          <li><span>2024 - Em andamento</span><br />UcSal - Análise e Desenvolvimento de Sistemas</li>
         </ul>
       </div>
     )
