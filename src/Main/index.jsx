@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import CV from '../assets/curriculo/Rodrigo_daHora_Full-Stack.pdf';
+import CV from '../assets/curriculo/Rodrigo_daHora.pdf';
 import facebook from '../assets/redes/facebook.png';
 import instagram from '../assets/redes/instagram.png';
 import linkedin from '../assets/redes/linkedin.png';
