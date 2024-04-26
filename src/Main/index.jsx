@@ -144,6 +144,7 @@ export default function Main() {
       <div className="tab-contents active-tab" id="experience">
         <ul>
           <li><span>2020 - 2022</span><br />Datamétrica - Atendente de Telemarketing</li>
+          <li><span>2020 - Atualmente</span><br />G4F - Analista de TI</li>
         </ul>
       </div>
     )
@@ -157,7 +158,7 @@ export default function Main() {
         <ul>
           <li><span>2013 - 2018</span><br />IFBA - Técnico em Informática</li>
           <li><span>2023</span><br />Cubos Academy - Desenvolvimento de Software</li>
-          <li><span>2024 - Em andamento</span><br />UcSal - Análise e Desenvolvimento de Sistemas</li>
+          <li><span>2024 - Atualmente</span><br />UcSal - Análise e Desenvolvimento de Sistemas</li>
         </ul>
       </div>
     )
