@@ -144,7 +144,7 @@ export default function Main() {
       <div className="tab-contents active-tab" id="experience">
         <ul>
           <li><span>2020 - 2022</span><br />Datamétrica - Atendente de Telemarketing</li>
-          <li><span>2020 - Atualmente</span><br />G4F - Analista de TI</li>
+          <li><span>2024 - Atualmente</span><br />G4F - Analista de TI</li>
         </ul>
       </div>
     )
