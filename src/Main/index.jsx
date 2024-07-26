@@ -25,15 +25,15 @@ export default function Main() {
   const [assunto, setAssunto] = useState('');
   const [alert, setAlert] = useState('');
   const [sucess, setSucess] = useState('');
-  
+
   let btnSkill;
   let btnExp;
   let btnEdc;
- 
+
   useEffect(() => {
-     btnSkill = document.querySelector('#skill');
-     btnExp = document.querySelector('#exp');
-     btnEdc = document.querySelector('#edc');
+    btnSkill = document.querySelector('#skill');
+    btnExp = document.querySelector('#exp');
+    btnEdc = document.querySelector('#edc');
   })
 
   function isValidEmail(email) {
@@ -44,59 +44,59 @@ export default function Main() {
   const handleSubmit = async (event) => {
     event.preventDefault();
 
-    if(!nome){
+    if (!nome) {
       setAlert('Preencha seu nome');
       return;
-    }else { setAlert(""); }
+    } else { setAlert(""); }
 
-    if(!assunto){
+    if (!assunto) {
       setAlert('Preencha o assunto');
       return;
-    }else { setAlert(""); }
+    } else { setAlert(""); }
 
-    if(!email){
+    if (!email) {
       setAlert('Preencha seu email');
       return;
-    }else { setAlert(""); }
+    } else { setAlert(""); }
 
     if (!isValidEmail(email)) {
       return setAlert("Email inválido!");
     } else { setAlert(""); }
 
-    if(!isValidEmail){
+    if (!isValidEmail) {
       setAlert('Email inválido');
       return;
-    }else { setAlert(""); }
+    } else { setAlert(""); }
 
-    if(!mensagem){
+    if (!mensagem) {
       setAlert('Preencha a mensagem');
       return;
-    }else { setAlert(""); }
+    } else { setAlert(""); }
 
 
     const usuario = {
-        nome: nome,
-        email: email,
-        assunto: assunto,
-        mensagem: mensagem
-      }
+      nome: nome,
+      email: email,
+      assunto: assunto,
+      mensagem: mensagem
+    }
 
-      try {
-        const response = await api.post('/email', usuario);
-      
-        if(response.status === 200){
-          setSucess(response.data.mensagem);
-          setAlert(null);
-          
+    try {
+      const response = await api.post('/email', usuario);
+
+      if (response.status === 200) {
+        setSucess(response.data.mensagem);
+        setAlert(null);
+
       }
       setTimeout(() => {
         window.location.reload()
-      },1300);
-      
-      } catch (error) {
-        console.error(error);
-      }
-    
+      }, 1300);
+
+    } catch (error) {
+      console.error(error);
+    }
+
   }
 
   const handleShowSkill = () => {
@@ -224,7 +224,7 @@ export default function Main() {
                 <p>Projeto estruturado pela Cubos Academy para desafio de módulo em dupla. É um website
                   onde os usuários podem fazer listagens de aquisições e ou vendas e terem um resumo de ganhos ou perdas.
                 </p>
-                <a href="https://github.com/rodrigodahora/Dindin-Bank" target='_blank'><img src={gitHub} className="fas fa-external-link-alt"/></a>
+                <a href="https://github.com/rodrigodahora/Dindin-Bank" target='_blank'><img src={gitHub} className="fas fa-external-link-alt" /></a>
               </div>
             </div>
             <div className="work">
@@ -234,16 +234,16 @@ export default function Main() {
                 <p>Projeto estruturado pela Cubos Academy para desafio de módulo em equipe. É um website
                   onde os usuários podem fazer controles bancários e gestão de cobranças dos usuários.
                   Link do deploy no README do projeto!</p>
-                <a href="https://github.com/rodrigodahora/desafio-modulo05-front-Baby-Sharp-DOM-DOM" target='_blank'><img src={gitHub} className="fas fa-external-link-alt"/></a>
+                <a href="https://github.com/rodrigodahora/desafio-modulo05-front-Baby-Sharp-DOM-DOM" target='_blank'><img src={gitHub} className="fas fa-external-link-alt" /></a>
               </div>
             </div>
-            
+
             <div className="work">
               <img src={Work3} alt="" />
               <div className="layer">
                 <h2>Projetos em Construção</h2>
                 <p></p>
-                <a href="#"><img src={gitHub} className="fas fa-external-link-alt"/></a>
+                <a href="#"><img src={gitHub} className="fas fa-external-link-alt" /></a>
               </div>
             </div>
           </div>
@@ -255,10 +255,8 @@ export default function Main() {
           <div className="row">
             <div className="contact-left">
               <h2 className="sub-title">Contato</h2>
-              <p className='p-telefone'><img src={telefone} className="fas fa-phone-square-alt img-icons"></img> (75) 9 9894-1934</p>
+              <p className='p-telefone'><img src={telefone} className="fas fa-phone-square-alt img-icons"></img> (71) 9 9906-6921</p>
               <div className="social-icons">
-                <a href="https://www.facebook.com/rodrigo.natan.9/" target='_blank'><img className='fab fa-facebook img-icons' src={facebook} alt="Facebook" /></a>
-                <a href="https://www.instagram.com/natandh/" target='_blank'><img className='fab fa-instagram img-icons' src={instagram} alt="Instagram" /></a>
                 <a href="https://www.linkedin.com/in/natandh/" target='_blank'><img className='fab fa-linkedin img-icons' src={linkedin} alt="Instagram" /></a>
               </div>
               <a href={CV} download className="btn btn2">Download Currículo</a>
@@ -276,7 +274,7 @@ export default function Main() {
             </div>
           </div>
         </div>
-        <a href="#" ><img id='btn-top' src={top} alt="Back to the top"/></a>
+        <a href="#" ><img id='btn-top' src={top} alt="Back to the top" /></a>
         <footer className="copyright">
           <p>copyright @ Dev Alphaspace. Made with <i className="fas fa-heart"></i> by Dev Alphaspace</p>
         </footer>
